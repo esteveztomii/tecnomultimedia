@@ -1,0 +1,157 @@
+int pantallas=0;
+int cant = 14;
+
+PImage [] imagen = new PImage [cant];
+
+void setup () {
+  size (600, 600);
+
+  for (int i=0; i<cant; i++) {
+  imagen [i] = loadImage("imagen"+i+".jpg");
+ 
+  }
+}
+
+void draw() {
+
+  background(0);
+
+  if (pantallas==0) {
+    image (imagen[0], 0, 0, 600, 600 );
+    opciones(215, 300, 150, 80, "Inicio");
+    opciones (215, 450, 150, 80, "Créditos");
+  }
+
+  if (pantallas==1) {                                                               // pantalla 1
+    image (imagen[1], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                            //fondo de texto
+    rect(50, 30, 500, 350);                            //marco del fondo del texto
+    fill(0);                                           //color del texto
+    text (texto[0], 60, 40, 480, 500);                 //texto
+    opciones(420, 450, 150, 80, "Siguiente");                   //botón opción A
+                 
+  }
+
+  if (pantallas==2) {                                                              // pantalla 2
+    image (imagen[2], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 500, 320);                            //marco del fondo del texto
+    fill(0);                                           //color de texto
+    text (texto[1], 60, 40, 480, 500);                //texto
+    opciones(420, 450, 150, 80, "Opción A");         //boton opción continuar
+    opciones(50, 450, 150, 80, "Opción B");
+  } 
+  
+  else if (pantallas==3) {                                                          //pantalla 8
+   image (imagen[3], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 400);                            //marco del fondo del texto
+    fill(0);                                           //color de texto
+    text (texto[2], 60, 40, 480, 500);                 //texto
+    opciones(420, 450, 150, 80, "Siguiente");          //boton opcion continuar
+                 
+  }
+
+  if (pantallas==4) {                                                               //pantalla 9
+    image (imagen[4], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 200);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[3], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "siguiente");
+   
+  }
+  if (pantallas==5) {                                      //pantalla 3
+    image (imagen[5], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 500);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[4], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "siguiente");
+  }
+
+  if (pantallas==6) {                                    // pantalla 4
+    image (imagen[6], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 200);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[5], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Siguiente");
+    
+  }
+
+  if (pantallas==7) {                                    // pantalla 5
+   image (imagen[7], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 150);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[6], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Siguiente");
+  }
+
+  if (pantallas==8) {                                    // pantalla 6
+    image (imagen[8], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 200);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[7], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Siguiente");
+   
+  }
+
+  if (pantallas==9) {                                  //pantalla 7
+    image (imagen[9], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 150);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[8], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Opción A");
+    opciones(50, 450, 150, 80, "Opción B");
+  }
+
+  if (pantallas==10) {                                // pantalla 10
+    image (imagen[10], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 100);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[9], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Opción A");
+    opciones(50, 450, 150, 80, "Opción B");
+  }
+
+  if (pantallas==11) {                              //pantalla 11
+    image (imagen[11], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 150);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[10], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Fin");
+    
+  }
+
+  if (pantallas==12) {                              //pantalla 12
+    image (imagen[12], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 200);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[11], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Fin");
+  }
+
+  if (pantallas==13) {                            // pantalla 13
+    image (imagen[13], 0, 0, 600, 600);
+    fill(255, 255, 255, 50);                           //fondo de texto
+    rect(50, 30, 490, 180);                            //marco del fondo del texto
+    fill(0);                 
+    text (texto[12], 60, 40, 480, 450);
+    opciones(420, 450, 150, 80, "Fin");
+  }
+  
+  else if (pantallas==14) {
+    fill (255);
+    textSize(30);
+    fill(255);
+    text ( "Programado por: Tomas Estevez\n Autor: Ray Bradbury   ", width/6, height/4);
+    opciones(420, 450, 150, 80, "Inicio");
+  }
+  }
